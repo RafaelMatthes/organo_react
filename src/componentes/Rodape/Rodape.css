@@ -17,3 +17,8 @@
 .rodapepg .sociais img {
     padding: 32px;
 }
+
+.rodapepg  a {
+    color: white;
+    text-decoration: none;
+}

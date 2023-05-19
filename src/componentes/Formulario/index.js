@@ -23,7 +23,6 @@ const Formulario = (props) => {
     }
     const onSave= (evento) => {
         evento.preventDefault()
-        console.log({ nome, cargo, time , imagem })
         props.aoAdicionar({
             nome,
             cargo,
@@ -54,7 +53,7 @@ const Formulario = (props) => {
                     valor={imagem}
                     setValor={setImagem}
                     label="Github ID"
-                    placeholder="Informe o endereço da Imagem"
+                    placeholder="Informe o ID do Github"
                 />
                 <ListaSuspensa
                     valor={time}
