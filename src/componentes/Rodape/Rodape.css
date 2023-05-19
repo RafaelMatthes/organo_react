@@ -1,0 +1,19 @@
+.rodape {
+    background-color: #6278f7;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: white;
+    padding: 75px;
+}
+
+.rodape .sociais {
+    flex-wrap: wrap;
+}
+
+.rodape .sociais img {
+    padding: 32px;
+}

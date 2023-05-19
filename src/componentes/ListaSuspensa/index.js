@@ -4,7 +4,11 @@ const ListaSuspensa = (props) => {
     return (
         <div className='ListaSuspensa'>
             <label>{props.label}</label>
-            <select onChange={evento => props.setValor(evento.target.value)} value={props.valor}>
+            <select
+                onChange={evento => props.setValor(evento.target.value)}
+                value={props.valor}
+                required={props.required}
+            >
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}

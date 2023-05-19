@@ -11,7 +11,7 @@ const Formulario = (props) => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [time, setTime] = useState(props.times[0])
     // useState é um método do Reactjs que controla o "estado" da variavel
     // ele retornará uma variável e um método set
 
@@ -19,11 +19,11 @@ const Formulario = (props) => {
         setNome('')
         setCargo('')
         setImagem('')
-        setTime('--')
+        setTime(time)
     }
     const onSave= (evento) => {
         evento.preventDefault()
-        console.log('foi enviado')
+        console.log({ nome, cargo, time , imagem })
         props.aoAdicionar({
             nome,
             cargo,
@@ -58,7 +58,7 @@ const Formulario = (props) => {
                 />
                 <ListaSuspensa
                     valor={time}
-                    setValor={setTime}
+                    setValor={valor => setTime(valor)}
                     label="Time"
                     itens={props.times}
                 />
