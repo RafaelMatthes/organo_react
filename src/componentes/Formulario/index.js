@@ -53,7 +53,7 @@ const Formulario = (props) => {
                 <CampoTexto
                     valor={imagem}
                     setValor={setImagem}
-                    label="Imagem"
+                    label="Github ID"
                     placeholder="Informe o endereço da Imagem"
                 />
                 <ListaSuspensa
