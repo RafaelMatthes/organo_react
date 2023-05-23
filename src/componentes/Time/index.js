@@ -20,7 +20,7 @@ const Time = (props) => {
                 onChange={(evento) => {
                     props.mudaCor(
                         evento.target.value,
-                        props.time.nome
+                        props.time.id
                     )
                 }}
             />
@@ -32,6 +32,7 @@ const Time = (props) => {
                         nome={colaborador.nome}
                         cargo={colaborador.cargo}
                         imagem={colaborador.imagem}
+                        id={colaborador.id}
                         corSecundaria={props.corSecundaria}
                         aoDeletar={props.aoDeletar}
                     />
