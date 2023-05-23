@@ -42,8 +42,8 @@ const Formulario = (props) => {
         evento.preventDefault()
         props.aoAddNovoTime({
             'nome': nomeTime,
-            'corSecundaria': corTime,
-            'corPrimaria': corTime
+            'cor': corTime,
+            'cor': corTime
         })
         cleanForm()
     }

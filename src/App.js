@@ -13,26 +13,23 @@ function App() {
     {
       'id': uuidv4(),
       'nome': 'Programação',
-      'corPrimaria': '#d9f7e9',
-      'corSecundaria': '#57c278',
+      'cor': '#d9f7e9',
     },
     {
       'id': uuidv4(),
       'nome': 'Front-end',
-      'corPrimaria': '#e8f8ff',
-      'corSecundaria': '#82cffa',
+      'cor': '#e8f8ff',
     },
     {
       'id': uuidv4(),
       'nome': 'Back-end',
-      'corPrimaria': '#f0f8e2',
-      'corSecundaria': '#a6d157',
+      'cor': '#f0f8e2',
+      'cor': '#a6d157',
     },
     {
       'id': uuidv4(),
       'nome': 'Data Science',
-      'corPrimaria': '#fde7e8',
-      'corSecundaria': '#e06b69',
+      'cor': '#fde7e8',
     },
   ])
 
@@ -51,7 +48,7 @@ function App() {
   function mudarCorTime(cor, id) {
     setTimes( times.map((time) => {
       if(time.id === id) {
-        time.corPrimaria = cor
+        time.cor = cor
       }
       return time
     }))
@@ -73,8 +70,8 @@ function App() {
         <Time
           key={time.nome}
           time={time}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          cor={time.cor}
+          cor={time.cor}
           colaboradores={colaboradores.filter(colaborador => time.nome === colaborador.time)}
           aoDeletar={delColaborador}
           mudaCor={mudarCorTime}

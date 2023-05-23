@@ -1,9 +1,10 @@
 import './Time.css'
 import Colaborador from '../Colaborador'
+import hexToRgba from 'hex-to-rgba';
 
 const Time = (props) => {
-    const cssPrimaria = { backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: props.corPrimaria }
-    const cssSecundaria = { borderColor: props.corSecundaria }
+    const cssPrimaria = { backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: hexToRgba(props.cor, '0.6')}
+    const cssSecundaria = { borderColor: props.cor }
 
     return (
         // se o boleano for True, executa a segunda parte
@@ -14,7 +15,7 @@ const Time = (props) => {
         >
             <h3 style={cssSecundaria}>{props.nome}</h3>
             <input
-                value={props.corPrimaria}
+                value={props.cor}
                 type="color"
                 className="input-cor"
                 onChange={(evento) => {
@@ -33,7 +34,7 @@ const Time = (props) => {
                         cargo={colaborador.cargo}
                         imagem={colaborador.imagem}
                         id={colaborador.id}
-                        corSecundaria={props.corSecundaria}
+                        cor={props.cor}
                         aoDeletar={props.aoDeletar}
                     />
                 })}
