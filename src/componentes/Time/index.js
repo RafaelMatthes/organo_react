@@ -2,7 +2,7 @@ import './Time.css'
 import Colaborador from '../Colaborador'
 
 const Time = (props) => {
-    const cssPrimaria = { backgroundColor: props.corPrimaria }
+    const cssPrimaria = { backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: props.corPrimaria }
     const cssSecundaria = { borderColor: props.corSecundaria }
 
     return (
@@ -13,16 +13,24 @@ const Time = (props) => {
             style={cssPrimaria}
         >
             <h3 style={cssSecundaria}>{props.nome}</h3>
+            <input
+                value={props.corPrimaria}
+                type="color"
+                className="input-cor"
+                onClick={() => {}}
+            />
             <div className='colaboradores'>
                 {props.colaboradores.map( colaborador =>
-                    <Colaborador
+                    {
+                    return <Colaborador
                         key={colaborador.nome}
                         nome={colaborador.nome}
                         cargo={colaborador.cargo}
                         imagem={colaborador.imagem}
                         corSecundaria={props.corSecundaria}
+                        aoDeletar={props.aoDeletar}
                     />
-                )}
+                })}
             </div>
         </section>
     )

@@ -37,6 +37,11 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  function delColaborador(colaborador) {
+    console.log('deleting colaborado' + colaborador)
+
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -52,6 +57,7 @@ function App() {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores.filter(colaborador => time.nome === colaborador.time)}
+          aoDeletar={delColaborador}
           />
         )
       }
