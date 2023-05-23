@@ -1,8 +1,7 @@
 
 import './Formulario.css'
 import { useState } from 'react'
-import CampoTexto from '../CampoTexto'
-import CampoCor from '../CampoCor'
+import CampoInput from '../CampoInput'
 import ListaSuspensa from '../ListaSuspensa'
 import Botao from '../Botao'
 import { v4 as uuidv4 } from 'uuid'
@@ -52,20 +51,20 @@ const Formulario = (props) => {
         <section className="formulario">
             <form onSubmit={onSaveColab}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto
+                <CampoInput
                     valor={nome}
                     setValor={setNome}
                     obrigatorio={true}
                     label="Nome"
                     placeholder="Informe seu Nome"
                 />
-                <CampoTexto
+                <CampoInput
                     valor={cargo}
                     setValor={setCargo}
                     obrigatorio={true}
                     label="Cargo" placeholder="Informe seu Cargo"
                 />
-                <CampoTexto
+                <CampoInput
                     valor={imagem}
                     setValor={setImagem}
                     label="Github ID"
@@ -81,17 +80,18 @@ const Formulario = (props) => {
             </form>
             <form onSubmit={onSaveTime}>
                 <h2>Preencha os dados para criar o um novo Time</h2>
-                <CampoTexto
+                <CampoInput
                     valor={nomeTime}
                     setValor={setNomeTime}
                     obrigatorio
                     label="Nome"
                     placeholder="Informe o Nome do Time"
                 />
-                <CampoCor
+                <CampoInput
                     valor={corTime}
                     setValor={setCorTime}
                     label="Cor" placeholder="Digite a cor do time"
+                    type='color'
                 />
                 <Botao>Add Time</Botao>
             </form>

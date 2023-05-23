@@ -71,7 +71,6 @@ function App() {
           key={time.nome}
           time={time}
           cor={time.cor}
-          cor={time.cor}
           colaboradores={colaboradores.filter(colaborador => time.nome === colaborador.time)}
           aoDeletar={delColaborador}
           mudaCor={mudarCorTime}
