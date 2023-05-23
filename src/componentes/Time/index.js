@@ -17,7 +17,12 @@ const Time = (props) => {
                 value={props.corPrimaria}
                 type="color"
                 className="input-cor"
-                onClick={() => {}}
+                onChange={(evento) => {
+                    props.mudaCor(
+                        evento.target.value,
+                        props.time.nome
+                    )
+                }}
             />
             <div className='colaboradores'>
                 {props.colaboradores.map( colaborador =>
